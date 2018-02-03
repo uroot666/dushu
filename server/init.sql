@@ -47,4 +47,4 @@ create table dushu.tags(
 create table dushu.address(
     id int primary key auto_increment,
     address varchar(200) comment '书籍地址'
-)
+) character set = utf8;

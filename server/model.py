@@ -40,6 +40,7 @@ def book_information(barcode):
     try:
         res = json.loads(requests.get(url, headers=headers).text)
         #写入数据库
+        print('write db')
         if res.get('title', '') and book_is_storage(res.get('isbn13')):
             code = book_storage(res)
     except BaseException as e:
@@ -67,7 +68,7 @@ def book_storage(book_dict):
         if key == 'catalog':
             continue
         elif key == "author" or key == "translator":
-            book_list.append(book_dict.get(key)[0])
+            book_list.append(str(book_dict.get(key)))
         else:
             book_list.append((book_dict.get(key, '')))
     add_time = datetime.datetime.now().strftime("%Y-%m-%d")
