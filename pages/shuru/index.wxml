@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+
+    <view class="userinfo">
+      <text>ISBN号查询</text>
+    </view>
+  <view class="bolder">
+        <input focus type="text" class="input-search" maxlength="140" 
+placeholder="输入ISBN号" confirm-type="done" bindconfirm="bindViewInput" value="{{inputTxt}}" />
+    </view>
+
+  <block wx:if="{{barcodeData}}">
+    <view class="usermotto">
+      <text>书籍的查询结果：</text>
+      <text style="margin-top:20px;font-size:16px;">名称: {{barcodeData.title}}</text>
+      <text style="margin-top:10px;font-size:16px;">作者: {{barcodeData.author}}</text>
+      <text style="margin-top:10px;font-size:16px;">出版社: {{barcodeData.publisher}}</text>
+      <text style="margin-top:10px;font-size:16px;">出版时间: {{barcodeData.pubdate}}</text>
+      <text style="margin-top:10px;font-size:16px;">书本定价: {{barcodeData.price}}</text>
+    </view>
+  </block>
+</view>

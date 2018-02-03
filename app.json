@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/shuru/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F5F5F5",
+    "backgroundColor": "#11cd6e",
+    "navigationBarTitleText": "书籍ISBN查询",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#a9b7b7",
+    "backgroundColor": "#F5F5F5",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "img/saom.png",
+        "iconPath": "img/saom.png",
+        "pagePath": "pages/index/index",
+        "text": "扫码"
+      },
+      {
+        "selectedIconPath": "img/sr.png",
+        "iconPath": "img/sr.png",
+        "pagePath": "pages/shuru/index",
+        "text": "输入"
+      }
+      ]
+    }
+}
