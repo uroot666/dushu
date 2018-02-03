@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/shuru/index",
+    "pages/address/index",
     "pages/logs/logs"
   ],
   "window":{
@@ -28,6 +29,12 @@
         "iconPath": "img/sr.png",
         "pagePath": "pages/shuru/index",
         "text": "输入"
+      },
+      {
+        "selectedIconPath": "img/sr.png",
+        "iconPath": "img/sr.png",
+        "pagePath": "pages/address/index",
+        "text": "添加地址"
       }
       ]
     }

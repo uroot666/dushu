@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+
+    <view class="userinfo">
+      <text>添加地址</text>
+    </view>
+  <view class="bolder">
+        <input focus type="text" class="input-search" maxlength="140" 
+placeholder="输入地址" confirm-type="done" bindconfirm="bindViewInput" value="{{inputTxt}}" />
+    </view>
+
+</view>

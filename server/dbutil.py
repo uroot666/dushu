@@ -4,10 +4,10 @@
 import pymysql
 import traceback
 
-config = {'host':"192.168.174.136", 
-        "user":"root", 
-        "password":"passwd", 
-        "database":"test",
+config = {'host':"192.168.198.130", 
+        "user":"dushu", 
+        "password":"dushu_weixin", 
+        "database":"dushu",
         "charset":"utf8"
 }
 

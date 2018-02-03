@@ -46,6 +46,13 @@ def get_book():
         pass
     return data
     
+@app.route('/weixin/address/add/', methods=['GET','POST'])
+def address_add():
+    address = request.args.get('address', '')
+    print(address)
+    if address:
+        model.add_address(address)
+    return json.dumps({'code':200})
 
 @app.errorhandler(404)
 def page_not_fount(e):
