@@ -100,10 +100,21 @@ def book_storage(book_dict):
 # 判断书籍是否已经在仓库
 def book_is_storage(isbn):
     return True
-
+# 返回最近的一次地址ID
 def book_address():
     _, addr_id = dbutil.db_operating(address_sql, True)
     return addr_id
 
+# 添加地址到数据库
 def add_address(address):
     dbutil.db_operating(add_address_sql, False, (address,))
+
+# 查询书籍信息
+def book_list(num):
+    bookList = []
+    book_list_key = ('title', 'author', 'publisher', 'pubdate', 'price')
+    book_list_sql = 'select title,author,publisher,pubdate,price from book_information'
+    _, res = dbutil.db_operating(book_list_sql, True)
+    for _book in res:
+        bookList.append(dict(zip(book_list_key, _book)))
+    return {'data':bookList}
